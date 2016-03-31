@@ -4,9 +4,9 @@
 
 package com.Arceus02.RegionCommand;
 
-import com.sk89q.worldedit.LocalSession;
-import com.sk89q.worldedit.WorldEdit;
-import com.sk89q.worldedit.bukkit.WorldEditPlugin;
+//import com.sk89q.worldedit.LocalSession;
+//import com.sk89q.worldedit.WorldEdit;
+//import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 import org.bukkit.entity.Player;
 import org.bukkit.World;
 import org.bukkit.command.Command;
@@ -88,6 +88,7 @@ public class RegionCommand extends JavaPlugin
             Location loc1 = new Location((World)this.getServer().getWorlds().get(0), 0.0, 0.0, 0.0);
             Location loc2 = new Location((World)this.getServer().getWorlds().get(0), 0.0, 0.0, 0.0);
             if (sender instanceof Player) {
+/*
                 final WorldEditPlugin wep = (WorldEditPlugin)this.getServer().getPluginManager().getPlugin("WorldEdit");
                 final WorldEdit we = wep.getWorldEdit();
                 final Player p = (Player)sender;
@@ -104,6 +105,9 @@ public class RegionCommand extends JavaPlugin
                     }
                 }
                 catch (Exception ex) {}
+*/                
+                loc1 = ((Player)sender).getLocation();
+                loc2 = ((Player)sender).getEyeLocation();
             }
             this.reloadConfig();
             this.getConfig().createSection(args[0]);

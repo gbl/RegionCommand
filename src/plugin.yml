@@ -1,0 +1,26 @@
+name: RegionCommand
+version: 1.01
+main: com.Arceus02.RegionCommand.RegionCommand
+author: Arceus02, removed WorldEdit dependency by Giselb/caer
+
+permissions:
+    region.create:
+        default: op
+    region.remove:
+        default: op
+    region.reload:
+        default: op
+
+commands:
+    createregion:
+        description: Create a region.
+        permission: region.create
+        aliases: [rcreate]
+    removeregion:
+        description: Reload regions.
+        permission: region.remove
+        aliases: [rremove]
+    reloadregion:
+        description: Remove a region.
+        permission: region.reload
+        aliases: [rreload]
